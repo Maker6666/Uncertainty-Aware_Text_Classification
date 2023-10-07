@@ -16,19 +16,14 @@ python st5_enc_variation.py
 ```
 
 ## Multi-label text classification
-Our pre-trained models are available: 
-
-1.Toxic Comment 
-
-2.GoEmotions-original 
-
-3.AAPD 
 
 * [Toxic Comments dataset](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data)  
   The Toxic Comment dataset is a large-scale dataset available on Kaggle. It consists of numerous online comments 
   labeled for toxicity, including 6 categories such as toxic, severe toxic, obscene, threat, insult, and identity hate.
 
-  In 
+  In our experiments, we introduce a new label called ’clean’. If ’clean’ is marked as 1, it signifies that the tweet does not contain any offensive content.
+  When ’clean’ is set to 1, all other labels are set to 0. Finally, we split our dataset into a training set and a test set using an 8:2 ratio.
+  
 * GoEmotions dataset  
   Number of examples: 58,009, Number of labels: 27 + Neutral.
   raw dataset can be retrieved by running:
@@ -37,9 +32,21 @@ Our pre-trained models are available:
   wget -P data/full_dataset/ https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_2.csv
   wget -P data/full_dataset/ https://storage.googleapis.com/gresearch/goemotions/data/full_dataset/goemotions_3.csv
   ```
-* [AAPD dataset](https://git.uwaterloo.ca/jimmylin/Castor-data/tree/master/datasets/AAPD)
+  In our experiments, We preprocess the text data, train on the training set, and evaluate on the test set.
   
+* [AAPD dataset](https://git.uwaterloo.ca/jimmylin/Castor-data/tree/master/datasets/AAPD)   
+  AAPD is a dataset used for large-scale text classification, specifically for academic papers.  
+  Number of examples: 54,840, Number of labels: 54.  
+  In our experiments, We preprocess the text data, train on the training set, and evaluate on the test set.  
+  You can download the dataset from: https://git.uwaterloo.ca/jimmylin/Castor-data/tree/master/datasets/AAPD
   
+Our pre-trained models are available. You can download our pretrained model, then set the "do_test" parameter(in config/original.json) to true, and execute the testing. 
+
+  1.[Toxic Comment](https://huggingface.co/maker666/Toxic_Comment) 
+
+  2.GoEmotions-original 
+
+  3.AAPD 
 
 ## References
 [1] A. Conneau, D. Kiela, SentEval: An Evaluation Toolkit for Universal Sentence Representations
