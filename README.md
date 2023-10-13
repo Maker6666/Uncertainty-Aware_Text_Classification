@@ -44,9 +44,9 @@ Our pre-trained models are available. You can download our pretrained model, the
 
   1.[Toxic Comment](https://huggingface.co/maker666/Toxic_Comment) 
 
-  2.GoEmotions-original 
+  2.[GoEmotions-original](https://huggingface.co/maker666/GoEmotions_Original) 
 
-  3.AAPD 
+  3.[AAPD](https://huggingface.co/maker666/AAPD) 
 
 ## References
 [1] A. Conneau, D. Kiela, SentEval: An Evaluation Toolkit for Universal Sentence Representations
